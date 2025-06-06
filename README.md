@@ -74,3 +74,26 @@ File2TXT 是一個便利的小工具，可以幫助你將指定資料夾 (含子
 - 此專案的原始碼也會開放在 GitHub，歡迎參考與貢獻。
 
 祝使用愉快！
+
+## 專案結構
+
+```
+File2TXT/
+├── src/            # Python 原始碼
+│   └── main.py     # 主程式入口
+├── img/            # 介面示意圖 (可選)
+└── README.md       # 使用與打包說明
+```
+
+## 開發與打包
+
+1. 先安裝 Python 以及 [PyInstaller](https://pyinstaller.org/)：
+   ```bash
+   pip install pyinstaller
+   ```
+2. 進入專案目錄後執行下列指令即可產生可執行檔：
+   ```bash
+   pyinstaller --name File2TXT --onefile --windowed src/main.py
+   ```
+   產生的檔案會位於 `dist/` 資料夾中，Windows 會得到 `File2TXT.exe`，macOS 則是 `File2TXT.app`。
+
